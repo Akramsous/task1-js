@@ -25,22 +25,6 @@ var products = [
   const tbody = document.getElementById('product-body');
 
   for(let i = 0; i < products.length; i++){
-    var data = products[i];
-    var tr = document.createElement('tr');
-    var td1 = document.createElement('td');
-    var td2 = document.createElement('td');
-    var td3 = document.createElement('td');
-    var td4 = document.createElement('td');
-
-    td1.innerHTML = data.id;
-    td2.innerHTML = data.name;
-    td3.innerHTML = data.price;
-    td4.innerHTML = data.description; 
-
-    tr.appendChild(td1);
-    tr.appendChild(td2);
-    tr.appendChild(td3);
-    tr.appendChild(td4);   
-
-    tbody.appendChild(tr);
+    var data = `<tr><td>${products[i].id}</td><td>${products[i].name}</td><td>${products[i].price}</td><td>${products[i].description}</td></tr>`;
+    tbody.innerHTML += data;
   }

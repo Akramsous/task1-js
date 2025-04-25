@@ -23,8 +23,9 @@ var products = [
   ];
 
   const tbody = document.getElementById('product-body');
-
+ var data="";
   for(let i = 0; i < products.length; i++){
-    var data = `<tr><td>${products[i].id}</td><td>${products[i].name}</td><td>${products[i].price}</td><td>${products[i].description}</td></tr>`;
-    tbody.innerHTML += data;
+     data += `<tr><td>${products[i].id}</td><td>${products[i].name}</td><td>${products[i].price}</td><td>${products[i].description}</td></tr>`;
+     
   }
+tbody.innerHTML=data;
